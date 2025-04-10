@@ -75,13 +75,11 @@ db.once('open', () => {
 });
 
 const app = express();
->>>>>>> 57b9baca8ca5205a52f125fc5a95316a172b9edb
 app.use(morgan('dev'));
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cors());
 
-<<<<<<< HEAD
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -90,7 +88,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
->>>>>>> 57b9baca8ca5205a52f125fc5a95316a172b9edb
 });
 
 const db = mongoose.connection;
@@ -99,12 +96,9 @@ db.once('open', () => console.log('Database connected'));
 
 // Routes
 app.use("/", authrouter);
-<<<<<<< HEAD
 
 // Server Start
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-=======
->>>>>>> 57b9baca8ca5205a52f125fc5a95316a172b9edb
