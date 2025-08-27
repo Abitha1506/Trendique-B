@@ -94,7 +94,7 @@ app.use(cors({
 }));
 
 // Routes
-app.use("/api/Route",userroute);
+app.use("/", authrouter);
 
 // Health Check
 app.get("/health", (req, res) => {
