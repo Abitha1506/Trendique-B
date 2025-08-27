@@ -54,7 +54,7 @@
 
 
 
-const User = require("../models/User");
+const User = require("../Model/usermodel");
 const jwt = require("jsonwebtoken");
 
 // Generate JWT
