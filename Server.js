@@ -81,7 +81,7 @@ const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 
-const userRoutes = require("./Route/userroute");
+const userroute = require("./Route/userroute");
 
 const app = express();
 
@@ -94,7 +94,7 @@ app.use(cors({
 }));
 
 // Routes
-app.use("/", authrouter);
+app.use("/api/Route",userroute);
 
 // Health Check
 app.get("/health", (req, res) => {
